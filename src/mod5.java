@@ -24,6 +24,8 @@ public class mod5 extends javax.swing.JFrame {
      */
     public mod5() {
         initComponents();
+        
+        
     }
 
     /**
@@ -54,7 +56,14 @@ public class mod5 extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {"dsa", "sad", "sad"},
+                {"sada", "sad", "asd"},
+                {"dsad", "asd", "asd"},
+                {"sad", "asd", "asd"},
+                {"sdf", "45", "345"},
+                {null, "45", "ter"},
+                {"ts", "frsf", "ggd"},
+                {"vg", "cbku", "cvbc"}
             },
             new String [] {
                 "ItemNo", "Name", "Price"
@@ -109,7 +118,7 @@ public class mod5 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 232, Short.MAX_VALUE)
+                .addGap(0, 226, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -205,16 +214,19 @@ public class mod5 extends javax.swing.JFrame {
 
     private void jButtonaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonaddActionPerformed
         // TODO add your handling code here:
-        TableModel model1=jTable1.getModel();
-        int[] indexs = jTable1.getSelectedRows();
-        Object[] row=new Object[4];
-        DefaultTableModel model2=(DefaultTableModel) jTable2.getModel();
         
-        for(int i=0; i<indexs.length; i++){
-            row[0]=model1.getValueAt(indexs[i], 0);
-            row[1]=model1.getValueAt(indexs[i], 1);
-            row[2]=model1.getValueAt(indexs[i], 2);
-            row[3]=model1.getValueAt(indexs[i], 3);
+                TableModel model1 = jTable1.getModel();
+
+        int[] indexs = jTable1.getSelectedRows();
+        Object[] row = new Object[4];
+        DefaultTableModel model2 = (DefaultTableModel) jTable2.getModel();
+
+        for(int i = 0; i < indexs.length; i++)
+        {
+            row[0] = model1.getValueAt(indexs[i], 0);
+            row[1] = model1.getValueAt(indexs[i], 1);
+            row[2] = model1.getValueAt(indexs[i], 2);
+            row[3] = model1.getValueAt(indexs[i], 3);
             model2.addRow(row);
         }
         

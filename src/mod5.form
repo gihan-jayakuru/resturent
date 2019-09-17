@@ -27,7 +27,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="232" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="226" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -115,10 +115,37 @@
         <Component class="javax.swing.JTable" name="jTable1">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="3" rowCount="0">
-                <Column editable="true" title="ItemNo" type="java.lang.Object"/>
-                <Column editable="true" title="Name" type="java.lang.Object"/>
-                <Column editable="true" title="Price" type="java.lang.Object"/>
+              <Table columnCount="3" rowCount="8">
+                <Column editable="true" title="ItemNo" type="java.lang.Object">
+                  <Data value="dsa"/>
+                  <Data value="sada"/>
+                  <Data value="dsad"/>
+                  <Data value="sad"/>
+                  <Data value="sdf"/>
+                  <Data value="null"/>
+                  <Data value="ts"/>
+                  <Data value="vg"/>
+                </Column>
+                <Column editable="true" title="Name" type="java.lang.Object">
+                  <Data value="sad"/>
+                  <Data value="sad"/>
+                  <Data value="asd"/>
+                  <Data value="asd"/>
+                  <Data value="45"/>
+                  <Data value="45"/>
+                  <Data value="frsf"/>
+                  <Data value="cbku"/>
+                </Column>
+                <Column editable="true" title="Price" type="java.lang.Object">
+                  <Data value="sad"/>
+                  <Data value="asd"/>
+                  <Data value="asd"/>
+                  <Data value="asd"/>
+                  <Data value="345"/>
+                  <Data value="ter"/>
+                  <Data value="ggd"/>
+                  <Data value="cvbc"/>
+                </Column>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
