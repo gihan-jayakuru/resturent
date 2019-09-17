@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -36,7 +37,7 @@ public class mod5 extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jButtonadd = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -61,7 +62,12 @@ public class mod5 extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("ADD to oder list");
+        jButtonadd.setText("ADD to oder list");
+        jButtonadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonaddActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("ODER");
 
@@ -70,7 +76,7 @@ public class mod5 extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "ItemNo", "Name", "Price"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -124,7 +130,7 @@ public class mod5 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
-                            .addComponent(jButton1)
+                            .addComponent(jButtonadd)
                             .addComponent(jButton3)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -144,7 +150,7 @@ public class mod5 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(23, 23, 23)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(jLabel3)
                         .addGap(94, 94, 94)
@@ -197,6 +203,23 @@ public class mod5 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButtonaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonaddActionPerformed
+        // TODO add your handling code here:
+        TableModel model1=jTable1.getModel();
+        int[] indexs = jTable1.getSelectedRows();
+        Object[] row=new Object[4];
+        DefaultTableModel model2=(DefaultTableModel) jTable2.getModel();
+        
+        for(int i=0; i<indexs.length; i++){
+            row[0]=model1.getValueAt(indexs[i], 0);
+            row[1]=model1.getValueAt(indexs[i], 1);
+            row[2]=model1.getValueAt(indexs[i], 2);
+            row[3]=model1.getValueAt(indexs[i], 3);
+            model2.addRow(row);
+        }
+        
+    }//GEN-LAST:event_jButtonaddActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -233,10 +256,10 @@ public class mod5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonadd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
