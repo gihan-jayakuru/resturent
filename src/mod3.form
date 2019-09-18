@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -41,7 +41,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldName" min="-2" pref="90" max="-2" attributes="0"/>
                                   <Component id="jTextFieldID" min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="jTextField3Age" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldAge" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -91,7 +91,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField3Age" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldAge" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -149,7 +149,7 @@
         <Property name="text" type="java.lang.String" value="Age :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3Age">
+    <Component class="javax.swing.JTextField" name="jTextFieldAge">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>

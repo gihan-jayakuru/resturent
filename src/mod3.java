@@ -1,4 +1,5 @@
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -24,6 +25,14 @@ public class mod3 extends javax.swing.JFrame {
         model=(DefaultTableModel) jTable1.getModel();
         
     }
+    //clear text field after save table
+    private void clearFields(){
+    
+        jTextFieldID.setText(null);
+        jTextFieldName.setText(null);
+        jTextFieldAge.setText(null);
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,7 +51,7 @@ public class mod3 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextFieldName = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3Age = new javax.swing.JTextField();
+        jTextFieldAge = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -100,7 +109,7 @@ public class mod3 extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField3Age, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jTextFieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jButton1))
                         .addGap(68, 68, 68)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -136,7 +145,7 @@ public class mod3 extends javax.swing.JFrame {
                                 .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3Age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addGap(47, 47, 47)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -158,9 +167,10 @@ public class mod3 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
         model.insertRow(model.getRowCount(),new Object[]{jTextFieldID.getText(),
-            jTextFieldName.getText(),jTextField3Age.getText()});
+            jTextFieldName.getText(),jTextFieldAge.getText()});
         
-      
+      JOptionPane.showMessageDialog(null,"Employee Added successfully");
+      clearFields();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -207,7 +217,7 @@ public class mod3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField3Age;
+    private javax.swing.JTextField jTextFieldAge;
     private javax.swing.JTextField jTextFieldID;
     private javax.swing.JTextField jTextFieldName;
     // End of variables declaration//GEN-END:variables
